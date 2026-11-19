@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Road — GTA 6 trophy guide &amp; tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 GTA 6 trophies on PlayStation 5: official names, descriptions and grades, a roadmap to the platinum, the one missable trophy flagged, and a cited guide for each trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Platinum Road</h1>
+    <p class="subtitle">The offline guide and tracker for every GTA 6 trophy — official names, descriptions and grades, a roadmap to the platinum, the one missable trophy flagged, and a guide to each trophy that cites its sources. No network needed: everything on this page lives in its own files.</p>
+    <div class="progress-wrap" id="progress-wrap" aria-live="polite">
+      <div class="progress-big"><span id="earned-count">0</span><span class="progress-of"> / 55 earned</span></div>
+      <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="progress-line" id="progress-line">Platinum: 0 of 1 &middot; Gold: 0 of 2 &middot; Silver: 0 of 6 &middot; Bronze: 0 of 46</p>
+      <p class="progress-note" id="progress-note">Tick a trophy when you earn it. Your progress is saved in this browser only.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab is-active" data-tab="tracker" id="tab-tracker">Tracker</button>
+  <button type="button" class="tab" data-tab="roadmap" id="tab-roadmap">Roadmap to platinum</button>
+  <button type="button" class="tab" data-tab="missables" id="tab-missables">Missables <span class="tab-badge" id="missable-badge">1</span></button>
+  <button type="button" class="tab" data-tab="about" id="tab-about">About &amp; sources</button>
+</nav>
+
+<main id="view">
+  <section id="view-tracker" class="view-panel" aria-label="Trophy tracker">
+    <div class="tracker-grid">
+      <div class="list-col">
+        <div class="controls" role="search">
+          <label class="search-label">Search
+            <input type="search" id="search" placeholder="Search a trophy or mission…" autocomplete="off">
+          </label>
+          <label class="grade-label">Grade
+            <select id="grade-filter">
+              <option value="all">All grades</option>
+              <option value="platinum">Platinum</option>
+              <option value="gold">Gold</option>
+              <option value="silver">Silver</option>
+              <option value="bronze">Bronze</option>
+            </select>
+          </label>
+        </div>
+        <div class="kind-chips" id="kind-chips" role="group" aria-label="Filter by kind">
+          <button type="button" class="chip is-active" data-kind="all">All kinds</button>
+          <button type="button" class="chip" data-kind="story">Story</button>
+          <button type="button" class="chip" data-kind="missable">Missable</button>
+          <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+          <button type="button" class="chip" data-kind="activities">Activities</button>
+          <button type="button" class="chip" data-kind="online">Online</button>
+        </div>
+        <div class="toggles">
+          <label class="toggle"><input type="checkbox" id="spoiler-toggle" checked> <span>Hide story spoilers — story trophies stay hidden until earned</span></label>
+          <label class="toggle"><input type="checkbox" id="hide-earned"> <span>Hide earned trophies</span></label>
+        </div>
+        <div class="save-row">
+          <button type="button" id="export-btn">Export progress</button>
+          <label class="import-label">Import progress <input type="file" id="import-file" accept="application/json,.json"></label>
+          <button type="button" id="example-btn" title="Tick 13 trophies to see the tracker filled in">Load example progress</button>
+          <button type="button" id="reset-btn">Reset progress</button>
+        </div>
+        <p class="list-count" id="list-count" aria-live="polite"></p>
+        <ul class="trophy-list" id="trophy-list"></ul>
+        <p class="online-note" id="online-note" hidden>This list has no online trophies: every one of the 55 is single-player and offline.</p>
+      </div>
+      <aside class="detail-col" id="detail-col" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view-panel" hidden aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="lede">Built from the official trophy descriptions alone: which story chapters and missions, which collectibles and counts, in what order. Stages overlap — start the Chapter 1 meditation in stage 3 while you play stage 2 — but the order below is the safe one.</p>
+    <ol class="roadmap" id="roadmap-list"></ol>
+  </section>
+
+  <section id="view-missables" class="view-panel" hidden aria-label="Missable trophies">
+    <h2>Missable trophies</h2>
+    <p class="lede">One trophy in the whole list can be missed. Everything else stays available after the credits, including the side-story finales.</p>
+    <div id="missable-list"></div>
+    <h3>Save discipline</h3>
+    <ul class="save-rules">
+      <li><strong>No mission replay, no New Game Plus.</strong> Once a story mission is done you cannot select it again, so a missed one-off stays missed for that playthrough.</li>
+      <li><strong>Keep one manual save at the start of every chapter</strong> and one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave.</li>
+      <li><strong>Never use cheats on your trophy save.</strong> Cheats should switch off both trophies and saving.</li>
+      <li><strong>The 100% checklist only appears after the story</strong> (Progress, then Stats, then 100% Completion), but work you do earlier still counts toward it.</li>
+    </ul>
+    <p class="source-line">Save rules: OutputLag — GTA 6 Trophy List. The only-missable flag: GTABase and PowerPyx via EGamers.</p>
+  </section>
+
+  <section id="view-about" class="view-panel" hidden aria-label="About and sources">
+    <h2>About this guide</h2>
+    <div id="about-body"></div>
+  </section>
+</main>
+
+<footer class="colophon">
+  <p>Leonida Platinum Road — an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide uses no Rockstar logo, artwork or game screenshots. Trophy names, descriptions, grades and PSN progress targets are shown as PlayStation publishes them, via Exophase and PSNProfiles. All guide text is this entry's own words. Works offline: every file it loads lives under app/.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
